@@ -61,3 +61,9 @@ foreach ($pathPattern in $knownPaths) {
 go test ./...
 
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-lumen-mob-prefs-detail.ps1
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-lumen-mob-prefs-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-lumen-mob-prefs-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

@@ -1,0 +1,17 @@
+{
+  "repo": "lumen-mob-prefs-index",
+  "thresholds": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 4,
+    "ship": 150,
+    "watch": 122
+  },
+  "terms": [
+    "form pressure",
+    "sync drift",
+    "local state",
+    "conflict cost"
+  ]
+}
