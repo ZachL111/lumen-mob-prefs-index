@@ -1,0 +1,73 @@
+{
+  "repo": "lumen-mob-prefs-index",
+  "language": "Go",
+  "category": "Mobile workflows",
+  "goal": "Create a Go reference implementation for prefs workflows, centered on state machine modeling, transition tables, and invalid-transition tests.",
+  "review_model": {
+    "terms": [
+      "form pressure",
+      "sync drift",
+      "local state",
+      "conflict cost"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "form pressure",
+      "signal": 76,
+      "slack": 54,
+      "drag": 24,
+      "confidence": 78,
+      "score": 212,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "sync drift",
+      "signal": 73,
+      "slack": 26,
+      "drag": 24,
+      "confidence": 78,
+      "score": 178,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "local state",
+      "signal": 70,
+      "slack": 46,
+      "drag": 16,
+      "confidence": 78,
+      "score": 216,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "conflict cost",
+      "signal": 72,
+      "slack": 32,
+      "drag": 10,
+      "confidence": 65,
+      "score": 211,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "form pressure",
+      "signal": 70,
+      "slack": 25,
+      "drag": 8,
+      "confidence": 50,
+      "score": 191,
+      "lane": "ship"
+    }
+  ]
+}

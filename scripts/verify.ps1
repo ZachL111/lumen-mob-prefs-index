@@ -59,3 +59,5 @@ foreach ($pathPattern in $knownPaths) {
 }
 
 go test ./...
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-lumen-mob-prefs-detail.ps1
